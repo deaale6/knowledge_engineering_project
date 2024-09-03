@@ -1,17 +1,187 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenceOntology/"
-     xml:base="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenceOntology/"
+<rdf:RDF xmlns="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology/"
+     xml:base="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenceOntology">
-        <owl:imports rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology"/>
-    </owl:Ontology>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#haAccordo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#haAccordo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Cadenza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Accordo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#haFunzioneArmonica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#haFunzioneArmonica">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Accordo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#FunzioneArmonica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#haModo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#haModo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#ProgressioneArmonica"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Modo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#haProgressioneArmonica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#haProgressioneArmonica">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Cadenza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#ProgressioneArmonica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#gradiScala -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#gradiScala">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Accordo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#nomeAccordo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#nomeAccordo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Accordo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#nomeModo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#nomeModo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Modo"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#posizioneFinale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#posizioneFinale">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Cadenza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#posizioneFondamentale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#posizioneFondamentale">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Accordo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#tipoCadenza -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#tipoCadenza">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Cadenza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#tipoFunzione -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#tipoFunzione">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#FunzioneArmonica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#tonoBase -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#tonoBase">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Cadenza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Accordo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Accordo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Cadenza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Cadenza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#FunzioneArmonica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#FunzioneArmonica"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Modo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#Modo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#ProgressioneArmonica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessia/ontologies/2024/8/CadenzaOntology#ProgressioneArmonica"/>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
+
 
