@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.com/cadences.owl#"
+     xml:base="http://www.example.com/cadences.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.com/cadences.owl">
+        <owl:imports rdf:resource="http://www.example.com/cadences.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/cadences.owl#belongsToSection -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/cadences.owl#belongsToSection">
+        <rdfs:domain rdf:resource="http://www.example.com/cadences.owl#Cadence"/>
+        <rdfs:range rdf:resource="http://www.example.com/cadences.owl#Section"/>
+        <rdfs:label>belongsToSection</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#hasChord -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/cadences.owl#hasChord">
+        <rdfs:domain rdf:resource="http://www.example.com/cadences.owl#Degree"/>
+        <rdfs:range rdf:resource="http://www.example.com/cadences.owl#Chord"/>
+        <rdfs:label>hasChord</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#hasFollowingDegree -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/cadences.owl#hasFollowingDegree">
+        <rdfs:domain rdf:resource="http://www.example.com/cadences.owl#Cadence"/>
+        <rdfs:range rdf:resource="http://www.example.com/cadences.owl#Degree"/>
+        <rdfs:label>hasFollowingDegree</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#hasKey -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/cadences.owl#hasKey">
+        <rdfs:domain rdf:resource="http://www.example.com/cadences.owl#Degree"/>
+        <rdfs:range rdf:resource="http://www.example.com/cadences.owl#Key"/>
+        <rdfs:label>hasKey</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#hasPrecedingDegree -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/cadences.owl#hasPrecedingDegree">
+        <rdfs:domain rdf:resource="http://www.example.com/cadences.owl#Cadence"/>
+        <rdfs:range rdf:resource="http://www.example.com/cadences.owl#Degree"/>
+        <rdfs:label>hasPrecedingDegree</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/cadences.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/cadences.owl#hasName">
+        <rdfs:domain rdf:resource="http://www.example.com/cadences.owl#Chord"/>
+        <rdfs:domain rdf:resource="http://www.example.com/cadences.owl#Key"/>
+        <rdfs:domain rdf:resource="http://www.example.com/cadences.owl#Section"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>hasName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Avoided -->
+
+    <owl:Class rdf:about="http://www.example.com/cadences.owl#Avoided">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/cadences.owl#Cadence"/>
+        <rdfs:label>Avoided</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Cadence -->
+
+    <owl:Class rdf:about="http://www.example.com/cadences.owl#Cadence">
+        <rdfs:label>Cadence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Chord -->
+
+    <owl:Class rdf:about="http://www.example.com/cadences.owl#Chord">
+        <rdfs:label>Chord</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Deceptive -->
+
+    <owl:Class rdf:about="http://www.example.com/cadences.owl#Deceptive">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/cadences.owl#Cadence"/>
+        <rdfs:label>Deceptive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Degree -->
+
+    <owl:Class rdf:about="http://www.example.com/cadences.owl#Degree">
+        <rdfs:label>Degree</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Half -->
+
+    <owl:Class rdf:about="http://www.example.com/cadences.owl#Half">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/cadences.owl#Cadence"/>
+        <rdfs:label>Half</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Imperfect -->
+
+    <owl:Class rdf:about="http://www.example.com/cadences.owl#Imperfect">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/cadences.owl#Cadence"/>
+        <rdfs:label>Imperfect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Key -->
+
+    <owl:Class rdf:about="http://www.example.com/cadences.owl#Key">
+        <rdfs:label>Key</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Perfect -->
+
+    <owl:Class rdf:about="http://www.example.com/cadences.owl#Perfect">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/cadences.owl#Cadence"/>
+        <rdfs:label>Perfect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Plagal -->
+
+    <owl:Class rdf:about="http://www.example.com/cadences.owl#Plagal">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/cadences.owl#Cadence"/>
+        <rdfs:label>Plagal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Section -->
+
+    <owl:Class rdf:about="http://www.example.com/cadences.owl#Section">
+        <rdfs:label>Section</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/cadences.owl#CMajorChord -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/cadences.owl#CMajorChord">
+        <rdf:type rdf:resource="http://www.example.com/cadences.owl#Chord"/>
+        <hasName>C Major</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#DeceptiveCadenceExample1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/cadences.owl#DeceptiveCadenceExample1">
+        <rdf:type rdf:resource="http://www.example.com/cadences.owl#Deceptive"/>
+        <belongsToSection rdf:resource="http://www.example.com/cadences.owl#SectionChorus"/>
+        <hasFollowingDegree rdf:resource="http://www.example.com/cadences.owl#Degree6"/>
+        <hasPrecedingDegree rdf:resource="http://www.example.com/cadences.owl#Degree5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Degree1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/cadences.owl#Degree1">
+        <rdf:type rdf:resource="http://www.example.com/cadences.owl#Degree"/>
+        <hasChord rdf:resource="http://www.example.com/cadences.owl#CMajorChord"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Degree5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/cadences.owl#Degree5">
+        <rdf:type rdf:resource="http://www.example.com/cadences.owl#Degree"/>
+        <hasChord rdf:resource="http://www.example.com/cadences.owl#G7Chord"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#Degree6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/cadences.owl#Degree6"/>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#G7Chord -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/cadences.owl#G7Chord">
+        <rdf:type rdf:resource="http://www.example.com/cadences.owl#Chord"/>
+        <hasName>G7</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#PerfectCadenceExample1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/cadences.owl#PerfectCadenceExample1">
+        <rdf:type rdf:resource="http://www.example.com/cadences.owl#Perfect"/>
+        <belongsToSection rdf:resource="http://www.example.com/cadences.owl#SectionVerse"/>
+        <hasFollowingDegree rdf:resource="http://www.example.com/cadences.owl#Degree1"/>
+        <hasPrecedingDegree rdf:resource="http://www.example.com/cadences.owl#Degree5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#SectionChorus -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/cadences.owl#SectionChorus">
+        <rdf:type rdf:resource="http://www.example.com/cadences.owl#Section"/>
+        <hasName>Chorus</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/cadences.owl#SectionVerse -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/cadences.owl#SectionVerse">
+        <rdf:type rdf:resource="http://www.example.com/cadences.owl#Section"/>
+        <hasName>Verse</hasName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
